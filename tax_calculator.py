@@ -39,13 +39,16 @@ taxable_wage = (total_income - 12570) - total_pension
 net_income = 12570 + (taxable_wage - (tax + national_insurance))
 net_income_monthly = net_income / 12
 
-print(f"Total Taxable Income at £{total_income:.2f} is £{taxable_wage:.2f}")
-print(f"Total tax applicable at £{total_income:.2f} is £{tax:.2f} annual or £{tax_monthly:.2f} monthly")
-print(
-    f"National Insurance contribution at £{total_income:.2f} is £{national_insurance:.2f} annual5"
-    f"or £{national_insurance_monthly:.2f} monthly")
-print(
-    f"Total Pension Contribution of £{total_income:.2f} at {Employee_pension_contributions:.2%} "
-    f"is £{total_pension:.2f} annual or £{total_pension_monthly:.2f} monthly")
-print(f"Take Home Pay at £{total_income:.2f} is £{net_income:.2f} annual or £{net_income_monthly:.2f} monthly")
-print("Disclaimer numbers may vary based on Tax Code or if you have of any benefits in kind from employer")
+
+result_string = (
+    f"Total Taxable Income at £{total_income:.2f} is £{taxable_wage:.2f}\n"
+    f"Total tax applicable at £{total_income:.2f} is £{tax:.2f} annual or £{tax_monthly:.2f} monthly\n"
+    f"National Insurance contribution at £{total_income:.2f} is £{national_insurance:.2f} annual "
+    f"or £{national_insurance_monthly:.2f} monthly\n"
+    f"Total Pension Contribution of £{total_income:.2f} at {Employee_pension_contributions:.2%} is £{total_pension:.2f} "
+    f"annual or £{total_pension_monthly:.2f} monthly\n"
+    f"Take Home Pay at £{total_income:.2f} is £{net_income:.2f} annual or £{net_income_monthly:.2f} monthly\n"
+    "Disclaimer: Numbers may vary based on Tax Code or if you have any benefits in kind from the employer"
+)
+
+print(result_string)
